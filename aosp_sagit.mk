@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Official AospExtended
+EXTENDED_BUILD_TYPE := OFFICIAL
+
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
