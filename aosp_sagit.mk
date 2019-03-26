@@ -45,3 +45,8 @@ BUILD_FINGERPRINT := Xiaomi/sagit/sagit:8.0.0/OPR1.170623.027/V9.2.3.0.OCAMIEK:u
 
 # Use Jelly
 TARGET_USE_JELLY := true
+
+# Use Gapps
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
