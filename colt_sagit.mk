@@ -21,16 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Official AospExtended
-EXTENDED_BUILD_TYPE := OFFICIAL
+# Maintainer Prop
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.colt.maintainer=Danilo
 
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-# Inherit some common AospExtended stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common ColtOS stuff.
+$(call inherit-product, vendor/colt/common.mk)
+$(call inherit-product, packages/apps/ColtApps/common.mk)
 
-PRODUCT_NAME := aosp_sagit
+PRODUCT_NAME := colt_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
